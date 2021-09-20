@@ -15,13 +15,13 @@ def ConquestCampaign(N, M, L, battalion):
             for j in range(M):
                 if a[i][j] == 1:
                     if j < M-1:
-                        b[i][j+1] = 1
+                        class[i][j+1] = 1
                     if j > 0:
-                        b[i][j-1] = 1
+                        c[i][j-1] = 1
                     if i < N-1:
-                        b[i+1][j] = 1
+                        c[i+1][j] = 1
                     if i > 0:
-                        b[i-1][j] = 1
-    a = c
-    days += 1
+                        c[i-1][j] = 1
+        a = c
+        days += 1
     return days

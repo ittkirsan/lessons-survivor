@@ -15,7 +15,7 @@ def ConquestCampaign(N, M, L, battalion):
             for j in range(M):
                 if a[i][j] == 1:
                     if j < M-1:
-                        class[i][j+1] = 1
+                        c[i][j+1] = 1
                     if j > 0:
                         c[i][j-1] = 1
                     if i < N-1:

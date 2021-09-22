@@ -1,5 +1,5 @@
 
-def stringPatternUnlock(N, hits):
+def PatternUnlock(N, hits):
     list1 = [1, 8, 3, 5]
     list2 = [6, 2, 7, 4, 9]
     summa = 0

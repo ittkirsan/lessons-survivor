@@ -15,9 +15,7 @@ def WordSearch(N, s, subs):
                 for j in range(0, k+1):
                     str1 = str1 + l[0]
                     l.pop(0)
-
                 result.append(str1)
-
                 str1 = ''
                 break
         if count == 0:
@@ -25,13 +23,11 @@ def WordSearch(N, s, subs):
                 str1 = str1 + l[0]
                 l.pop(0)
             result.append(str1)
-
             str1 = ''
 
     for m in range(len(l)):
         str1 = str1 + l[0]
         l.pop(0)
-
     result.append(str1)
 
     for strings in result:

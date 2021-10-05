@@ -25,6 +25,8 @@ def TheRabbitsFoot(s, encode):
                     result_str += array[j][i]
                 result_str += ' '
 
+        result_str = result_str.rstrip()
+
     else:
 
         s = s.split()

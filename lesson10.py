@@ -20,6 +20,3 @@ def PrintingCosts(Line):
         if el != tabl[j]:
             toner += 23
     return toner
-
-
-print(PrintingCosts('FGHJ'))

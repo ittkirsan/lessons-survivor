@@ -10,6 +10,9 @@ class func_test(unittest.TestCase):
         self.assertEqual(BigMinus("10000000000", "1"), "9999999999")
         self.assertEqual(BigMinus("1", "10000000000"), "9999999999")
         self.assertEqual(BigMinus("10000", "10000"), "0")
+        self.assertEqual(BigMinus("0", "1"), "1")
+        self.assertEqual(BigMinus("1", "1"), "0")
+        self.assertEqual(BigMinus("1", "0"), "1")
 
 
 if __name__ == '__main__':

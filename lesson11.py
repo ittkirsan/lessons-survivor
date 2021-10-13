@@ -26,7 +26,18 @@ BigMinus("1", "321") = "320"
 
 def BigMinus(s1, s2):
 
-    if len(s1) < len(s2):
+    if len(s1) == len(s2):
+        for i in range(len(s1)):
+            if int(s1[i]) > int(s2[i]):
+                s_max = s1
+                s_min = s2
+                break
+            else:
+                s_min = s1
+                s_max = s2
+                break
+
+    elif len(s1) < len(s2):
         s_min = s1
         s_max = s2
     else:

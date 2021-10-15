@@ -46,7 +46,3 @@ def UFO(N, data, octal):
             result.append(base_16)
 
     return result
-
-
-print(UFO(2, [1234, 1777], True))
-print(UFO(2, [1234, 1777], False))

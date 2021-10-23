@@ -6,12 +6,14 @@ def WordSearch(N, s, subs):
     l = s.split()
     str1 = ''
     strlen = 0
+
     for (index, elem) in enumerate(l):
         strlen += len(l[index])
         if strlen == N:
             str1 = str1 + l[index]
             strlen = 0
             result.append(str1)
+            str1 = ''
 
         elif strlen > N:
             result.append(str1)
@@ -32,14 +34,14 @@ def WordSearch(N, s, subs):
                 strlen = len(l[index]) + 1
 
             else:
-                str2 = i[0:len]
+                str2 = elem[0:N]
                 result.append(str2)
-                str1 = str1 + i[len: len(l[index])] + ' '
-                strlen = (len(l[index]) - len) + 1
+                str1 = str1 + elem[N:] + ' '
+                strlen = (len(l[index]) - N) + 1
 
-        elif index == len(l)-1:
-            str1 = str1 + l[index]
-            result.append(str1)
+        # elif index == len(l)-1:
+            # str1 = str1 + l[index]
+            # result.append(str1)
 
         else:
             str1 = str1 + l[index] + " "
@@ -57,3 +59,8 @@ def WordSearch(N, s, subs):
             result_list.append(0)
 
     return result_list
+
+
+#print(WordSearch(10, '12345', 'subs'))
+print(WordSearch(9, '1) stroka razbivaetsya na nabor strok...', 'strok'))
+print(WordSearch(12, 'строкаразбивается на набор строк через выравнивание по заданной ширине.', 'строк'))

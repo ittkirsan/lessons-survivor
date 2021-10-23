@@ -34,16 +34,20 @@ def TankRush(H1, W1, S1,  H2, W2, S2):
     for i in range(H1):
         if H1 - i >= H2:
             for j in range(W1):
-                if array_map[i][j] == array_tank[0][0]:
-                    count = 0
+                if W1 - j >= W2:
+                    if array_map[i][j] == array_tank[0][0]:
+                        count = 0
                     # если есть вхождение проверяем вхождение самой матрицы
-                    for k in range(H2):
-                        for m in range(W2):
-                            if array_map[i + k][j + m] == array_tank[k][m]:
-                                count += 1
-                            else:
-                                break
-                            if count == H2*W2:
-                                return True
+                        for k in range(H2):
+                            for m in range(W2):
+                                if array_map[i + k][j + m] == array_tank[k][m]:
+                                    count += 1
+                                else:
+                                    break
+                                if count == H2*W2:
+                                    return True
 
     return False
+
+
+print(TankRush(15, 15, '900934352126360 119214144058652 979486082875698 322436531185165 887105930987956 232802644488782 302771989566798 073573207654780 311755785362806 909007939272309 395094805516080 562910805349811 993854324744973 768703404219199 630625270887199', 2, 2, '99 99'))

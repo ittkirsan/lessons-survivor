@@ -3,7 +3,7 @@ from lesson15 import TankRush
 
 
 class func_test(unittest.TestCase):
-    def TankRansh(self):
+    def TankRunsh(self):
         self.assertEqual(TankRush(3, 4, "1234 2345 0987", 2, 2, "34 98"), True)
         self.assertEqual(
             TankRush(3, 4, "1234 5674 0987", 2, 2, "34 98"), False)

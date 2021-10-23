@@ -12,3 +12,6 @@ def SumOfThe(N, data):
     K = int(summ/2)
 
     return K
+
+
+print(SumOfThe(7, [100, -50, 10, -25, 90, -35, 90, ]))

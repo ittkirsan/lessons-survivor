@@ -47,22 +47,22 @@ def BastShoe(command):
 
     # выполняем операцию 4
     elif command[0] == '4':
-        if len(list_string) == 0:
-            return ""
-        elif flag == False and len(undo) == 0:
-            undo.append(list_string[-1])
-            list_string.pop()
-            return list_string[-1]
-        elif flag == False and len(undo) != 0:
-            return list_string[-1]
-
-        else:
+        if flag == False:
+            if len(undo) == 0:
+                undo.append(list_string[-1])
+                list_string.pop()
+                return list_string[-1]
+            else:
+                return list_string[-1]
+        elif len(list_string) > 0:
             undo.append(list_string[-1])
             list_string.pop()
             if len(list_string) == 0:
-                return ''
+                return ""
             else:
                 return list_string[-1]
+        else:
+            return ""
 
     # выполняем операцию 5
     elif command[0] == "5":

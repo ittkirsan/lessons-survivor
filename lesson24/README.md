@@ -4,7 +4,8 @@ ____
 К сожалению, никто не может объяснить, что такое Матрица.
 Ты должен сам увидеть это.
 
-![Matrix](https://github.com/ittkirsan/lessons-survivor/tree/main/images/mtx17.jpg)
+![Matrix](https://github.com/ittkirsan/lessons-survivor/blob/main/images/mtx17.jpg)
+
 На вход поступает Матрица размером MxN:
 
 1 2 3 4 5 6 

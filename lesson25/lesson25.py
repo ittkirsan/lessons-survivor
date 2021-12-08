@@ -22,6 +22,3 @@ def TransformTransform(A, n):
     for i in result:
         total += i
     return True if total % 2 == 0 else False
-
-
-print(TransformTransform([3, 2, 1], 3))

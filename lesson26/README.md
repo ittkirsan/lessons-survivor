@@ -1,7 +1,6 @@
 
 
 ## Белые Ходоки
-____
 
 ![Matrix](https://github.com/ittkirsan/lessons-survivor/blob/main/images/a-1.jpg)
 

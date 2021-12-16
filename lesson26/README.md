@@ -24,7 +24,11 @@ ____
 Например:
 
 "axxb6===4xaf5===eee5" => true
+
 "5==ooooooo=5=5" => false
+
 "abc=7==hdjs=3gg1=======5" => true
+
 "aaS=8" => false
+
 "9===1===9===1===9" => true

@@ -5,7 +5,7 @@ def Football(F, N):
     if N == 1:
         return False
     elif F == F_sort:
-        return True
+        return False
     count = 0
 
     for i in range(N):

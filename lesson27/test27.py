@@ -13,6 +13,7 @@ class testFunc(unittest.TestCase):
         self.assertEqual(Football([5, 3], 2), True)
         self.assertEqual(Football([1, 2, 6, 5, 4, 3, 7, 8], 8), True)
         self.assertEqual(Football([1, 2, 5, 3, 4], 5), False)
+        self.assertAlmostEqual(Football([5], 1), False)
 
 
 if __name__ == '__main__':

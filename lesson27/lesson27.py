@@ -4,6 +4,8 @@ def Football(F, N):
     F_sort = sorted(F)
     if F == F_sort:
         return True
+    elif N == 1:
+        return False
     count = 0
 
     for i in range(N):

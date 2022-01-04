@@ -1,6 +1,6 @@
 
 import unittest
-from lesson12 import MassVote
+from lesson12.lesson12 import MassVote
 
 
 class func_test(unittest.TestCase):

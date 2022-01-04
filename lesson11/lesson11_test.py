@@ -1,5 +1,5 @@
 import unittest
-from lesson11 import BigMinus
+from lesson11.lesson11 import BigMinus
 
 
 class func_test(unittest.TestCase):

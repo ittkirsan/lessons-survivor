@@ -1,6 +1,6 @@
 
 import unittest
-from lesson13 import UFO
+from lesson13.lesson13 import UFO
 
 
 class func_test(unittest.TestCase):

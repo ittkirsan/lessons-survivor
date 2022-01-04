@@ -1,5 +1,4 @@
-"""
-Танковый раш
+## Танковый раш
 
 Разведчики выяснили, что неведомый клан готовит внезапный массивный прорыв премиум-танков. 
 У нашей арты будет возможность произвести только один залп. Ваша задача: выявить местонахождение группировки танков на карте.
@@ -19,32 +18,11 @@
 или
 2 2 34 98
 Он входит в состав первого массива.
-Функция
-bool TankRush(int H1, int W1, string S1, int H2, intW2, string S2) 
+____
+
+## Функция
+
+*bool TankRush(int H1, int W1, string S1, int H2, intW2, string S2)*
+ 
 первыми тремя параметрами получает исходную карту, а следующими тремя -- карту, которая ищется в исходной.
 TankRush возвращает true, если вторая карта содержится в первой.
-"""
-
-
-def TankRush(H1, W1, S1,  H2, W2, S2):
-
-    array_map = S1.split()
-    array_tank = S2.split()
-    # ищем вхожение первого символа
-    for i in range(H1):
-        if H1 - i >= H2:
-            for j in range(W1):
-                if W1 - j >= W2:
-                    if array_map[i][j] == array_tank[0][0]:
-                        count = 0
-                    # если есть вхождение проверяем вхождение самой матрицы
-                        for k in range(H2):
-                            for m in range(W2):
-                                if array_map[i + k][j + m] == array_tank[k][m]:
-                                    count += 1
-                                else:
-                                    break
-                                if count == H2*W2:
-                                    return True
-
-    return False

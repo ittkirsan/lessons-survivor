@@ -1,5 +1,5 @@
 import unittest
-from lesson15 import TankRush
+from lesson15.lesson15 import TankRush
 
 
 class func_test(unittest.TestCase):

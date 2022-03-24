@@ -3,11 +3,12 @@
 def TreeOfLife(H, W, N, tree):
     treeList = []
     tree_growth_model = []
-
+    EMPTY = '.'
+    BRANCH = '+'
     for i in range(H):
         a = []
         for j in range(W):
-            if tree[i][j] == ".":
+            if tree[i][j] == EMPTY:
                 a.append(0)
             else:
                 a.append(1)
@@ -35,9 +36,9 @@ def TreeOfLife(H, W, N, tree):
         newstr = ''
         for j in row:
             if j == 0:
-                newstr += '.'
+                newstr += EMPTY
             else:
-                newstr += '+'
+                newstr += BRANCH
         tree_growth_model.append(newstr)
 
     return tree_growth_model

@@ -5,11 +5,16 @@ flag = 0
 
 def BastShoe(command):
     global flag, list_string, undo
+    ADD_TO_END = '1'
+    DEL_SYMBOLS = '2'
+    GET_SYNBOL = '3'
+    UNDO = '4'
+    REDO = '5'
 
     # разбиваем входящую строку на номер команды и аргументы
     command = command.split(' ', maxsplit=1)
     # выполняем операцию 1
-    if command[0] == '1':
+    if command[0] == ADD_TO_END:
         if len(undo) > 0:  # для прекращения цепочки для операции 4
             undo.clear()
             del list_string[:-1]
@@ -24,7 +29,7 @@ def BastShoe(command):
             return list_string[len(list_string)-1]
 
     # выполняем операцию 2
-    elif command[0] == '2':
+    elif command[0] == DEL_SYMBOLS:
         if len(undo) > 0:
             undo.clear()
             list_string.append('')
@@ -42,14 +47,14 @@ def BastShoe(command):
             return ''
 
     # выполняем операцию 3
-    elif command[0] == '3':
+    elif command[0] == GET_SYNBOL:
         if int(command[1]) >= len(list_string[-1]):
             return ''
         else:
             return list_string[-1][int(command[1])]
 
     # выполняем операцию 4
-    elif command[0] == '4':
+    elif command[0] == UNDO:
         if len(list_string) == 0:
             return ""
         elif flag > 0:
@@ -64,7 +69,7 @@ def BastShoe(command):
             return list_string[0]
 
             # выполняем операцию 5
-    elif command[0] == "5":
+    elif command[0] == REDO:
         if len(undo) == 0:
             return list_string[-1]
         elif len(undo) > 0:

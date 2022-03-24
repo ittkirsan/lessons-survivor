@@ -1,7 +1,11 @@
 
 
-
 def BigMinus(s1, s2):
+
+    if not isinstance(s1, str):
+        raise TypeError(f'Значение s1 не является строковым типом:{s1}')
+    elif not isinstance(s2, str):
+        raise TypeError(f'Значение s2 не является строковым типом:{s2}')
 
     if len(s1) == len(s2):
         for i in range(len(s1)):
@@ -58,5 +62,7 @@ def BigMinus(s1, s2):
     for i in range(len(result)-1):
         if int(result[0]) == 0:
             result = result[1:]
+
+    nst = "***ERROR***"
 
     return result

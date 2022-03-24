@@ -1,9 +1,8 @@
 def SynchronizingTables(N, ids, salary):
     ids_new = []
-    reordered_salary_array = []
     for i in range(N):
         ids_new.append(ids[i])
-
+    reordered_salary_array = []
     for i in range(N):
         reordered_salary_array.append(salary[i])
 

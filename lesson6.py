@@ -1,14 +1,15 @@
 
 def PatternUnlock(N, hits):
-    list1 = [1, 8, 3, 5]
-    list2 = [6, 2, 7, 4, 9]
+    ELEMENT_LIST_1 = [1, 8, 3, 5]
+    ELEMENT_LIST_2 = [6, 2, 7, 4, 9]
     line_length_unlock = 0
+    DIAGONAL_LENGTH = 2**0.5
 
     for i in range(N-1):
-        if (hits[i] in list1 and hits[i+1] in list1):
-            line_length_unlock = line_length_unlock + 2**0.5
-        elif (hits[i] in list2 and hits[i+1] in list2):
-            line_length_unlock = line_length_unlock + 2**0.5
+        if (hits[i] in ELEMENT_LIST_1 and hits[i+1] in ELEMENT_LIST_1):
+            line_length_unlock = line_length_unlock + DIAGONAL_LENGTH
+        elif (hits[i] in ELEMENT_LIST_2 and hits[i+1] in ELEMENT_LIST_2):
+            line_length_unlock = line_length_unlock + DIAGONAL_LENGTH
         else:
             line_length_unlock += 1
 

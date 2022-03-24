@@ -11,12 +11,12 @@ def PrintingCosts(Line):
                     't', 17, 'u', 17, 'v', 13, 'w', 19, 'x', 13, 'y', 24, 'z', 19, '{', 18, '|', 12, '}', 18, '~', 9]
 
     amount_of_toner_consumed = 0
-
+    CHAR_NOT_INCLUDED = 23
     for el in Line:
         for j in range(0, len(symbol_table), 2):
             if el == symbol_table[j]:
                 amount_of_toner_consumed += symbol_table[j + 1]
                 break
         if el != symbol_table[j]:
-            amount_of_toner_consumed += 23
+            amount_of_toner_consumed += CHAR_NOT_INCLUDED
     return amount_of_toner_consumed

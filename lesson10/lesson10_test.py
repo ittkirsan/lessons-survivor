@@ -1,5 +1,5 @@
 import unittest
-from lesson10.lesson10 import PrintingCosts
+from lesson10 import PrintingCosts
 
 
 class func_test(unittest.TestCase):

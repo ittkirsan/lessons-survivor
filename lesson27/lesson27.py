@@ -1,15 +1,15 @@
 
 
 def Football(F, N):
-    F_sort = sorted(F)
+    ARRAY_IN_ASCEND = sorted(F)
     if N == 1:
         return False
-    elif F == F_sort:
+    elif F == ARRAY_IN_ASCEND:
         return False
     count = 0
 
     for i in range(N):
-        if F[i] != F_sort[i]:
+        if F[i] != ARRAY_IN_ASCEND[i]:
             count += 1
             if count == 1:
                 start = i
@@ -18,13 +18,13 @@ def Football(F, N):
         return True
     elif count > 2:
         for k in range(N-1, 0, -1):
-            if F[k] != F_sort[k]:
+            if F[k] != ARRAY_IN_ASCEND[k]:
                 end = k
                 break
 
     F[start:end+1] = reversed(F[start:end+1])
 
-    if F_sort == F:
+    if ARRAY_IN_ASCEND == F:
         return True
 
     return False

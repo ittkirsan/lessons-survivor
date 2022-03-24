@@ -1,12 +1,12 @@
 
 
 def white_walkers(village):
-    human = "1234567890"
+    HUMAN = "1234567890"
     list_hum_ww = []
     list_humun = []
 
     for i in range(len(village)):
-        if village[i] in human:
+        if village[i] in HUMAN:
             list_hum_ww.append(village[i])
             list_humun.append(int(village[i]))
 
@@ -17,9 +17,9 @@ def white_walkers(village):
     count = 0
 
     for j in range(len(list_hum_ww)-4):
-        if list_hum_ww[j] in human:
+        if list_hum_ww[j] in HUMAN:
             sum_digits += int(list_hum_ww[j])
-            if list_hum_ww[j+4] in human:
+            if list_hum_ww[j+4] in HUMAN:
                 sum_digits += int(list_hum_ww[j+4])
                 if sum_digits == 10:
                     count += 1

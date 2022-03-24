@@ -5,6 +5,6 @@ def squirrel(N):
         factorial *= i
 
     k = str(factorial)
-    izu = int(k[0])
+    amount_diamonds = int(k[0])
 
-    return izu
+    return amount_diamonds

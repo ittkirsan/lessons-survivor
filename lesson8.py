@@ -1,15 +1,15 @@
 def SumOfThe(N, data):
     summa_min = 0
     summa_max = 0
-    summ = 0
+    sum_of_all_numbers = 0
     for i in data:
         if i < 0:
             summa_min += i
         else:
             summa_max += i
 
-    summ = summa_min + summa_max
-    K = int(summ/2)
+    sum_of_all_numbers = summa_min + summa_max
+    K = int(sum_of_all_numbers/2)
 
     return K
 

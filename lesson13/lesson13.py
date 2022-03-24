@@ -2,7 +2,7 @@
 
 def UFO(N, data, octal):
 
-    result = []
+    array_of_numbers_in_decimal_system = []
     if octal == True:
 
         for k in data:
@@ -13,7 +13,7 @@ def UFO(N, data, octal):
             for i in elstr:
                 base_8 += int(i) * (8**len_el)
                 len_el -= 1
-            result.append(base_8)
+            array_of_numbers_in_decimal_system.append(base_8)
 
     else:
         for k in data:
@@ -24,6 +24,6 @@ def UFO(N, data, octal):
             for i in elstr:
                 base_16 += int(i) * (16**len_el)
                 len_el -= 1
-            result.append(base_16)
+            array_of_numbers_in_decimal_system.append(base_16)
 
-    return result
+    return array_of_numbers_in_decimal_system

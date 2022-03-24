@@ -2,7 +2,7 @@
 def WordSearch(N, s, subs):
     str1 = ''
     result = []
-    result_list = []
+    searching_word_list = []
 
     l = list(s)
 
@@ -36,9 +36,9 @@ def WordSearch(N, s, subs):
             if words == subs:
                 mark = 1
         if mark == 1:
-            result_list.append(1)
+            searching_word_list.append(1)
 
         else:
-            result_list.append(0)
+            searching_word_list.append(0)
 
-    return result_list
+    return searching_word_list

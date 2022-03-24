@@ -2,14 +2,14 @@
 
 def MadMax(N, Tele):
     Tele.sort()
-    Tele2 = []
+    result_impuls_array = []
 
     for i in range(N-1):
         if i < (N-1)/2:
-            Tele2.append(Tele[i])
+            result_impuls_array.append(Tele[i])
 
     for i in range(N-1, -1, -1):
         if i >= (N-1)/2:
-            Tele2.append(Tele[i])
+            result_impuls_array.append(Tele[i])
 
-    return Tele2
+    return result_impuls_array

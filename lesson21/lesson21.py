@@ -11,9 +11,9 @@ def BiggerGreater(string):
             ind = string_new.index(elem)
 
             string_new[0], string_new[ind] = string_new[ind], string_new[0]
-            result = string[:i-1] + \
+            magic_word = string[:i-1] + \
                 ''.join(string_new[0]) + ''.join(sorted(string_new[1:]))
-            return result
+            return magic_word
 
-    result = ''
-    return result
+    magic_word = ''
+    return magic_word

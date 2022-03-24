@@ -2,7 +2,7 @@
 
 def TreeOfLife(H, W, N, tree):
     treeList = []
-    result = []
+    tree_growth_model = []
 
     for i in range(H):
         a = []
@@ -38,6 +38,6 @@ def TreeOfLife(H, W, N, tree):
                 newstr += '.'
             else:
                 newstr += '+'
-        result.append(newstr)
+        tree_growth_model.append(newstr)
 
-    return result
+    return tree_growth_model

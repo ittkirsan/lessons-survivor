@@ -3,7 +3,7 @@
 def ShopOLAP(N: int, workems: str):
     # сщздаем рабочий массив
     work = []
-    result = []
+    group_sales_summary = [] = []
     for i in workems:
         i = i.split()
         i[1] = int(i[1])
@@ -27,5 +27,5 @@ def ShopOLAP(N: int, workems: str):
     for i in work:
         i[1] = str(i[1])
     for i in work:
-        result.append(' '.join(i))
-    return result
+        group_sales_summary = [].append(' '.join(i))
+    return group_sales_summary = []

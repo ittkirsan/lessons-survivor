@@ -5,16 +5,16 @@ flag = 0
 
 def BastShoe(command):
     global flag, list_string, undo
-    ADD_TO_END = '1'
-    DEL_SYMBOLS = '2'
-    GET_SYNBOL = '3'
-    UNDO = '4'
-    REDO = '5'
+    ADD_TO_END = '1'  # добавить в конец строки
+    DEL_SYMBOLS = '2'  # удалить символы
+    GET_SYNBOL = '3'  # выдать символ
+    UNDO = '4'  # отмена последней операции ADD_TO_END или DEL_SYMBOLS
+    REDO = '5'  # выполнить заново последнюю отменённую с помощью Undo операцию
 
     # разбиваем входящую строку на номер команды и аргументы
     command = command.split(' ', maxsplit=1)
     # выполняем операцию 1
-    if command[0] == ADD_TO_END:
+    if command[1] == ADD_TO_END:
         if len(undo) > 0:  # для прекращения цепочки для операции 4
             undo.clear()
             del list_string[:-1]

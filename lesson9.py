@@ -1,4 +1,7 @@
 def TheRabbitsFoot(s, encode):
+    # encode = true (зашифровывает исходную строку)
+    # encode = false (расшифровывает исходную строку)
+
     if encode == True:
         s = ''.join(s.split())
         sq = len(s)**(0.5)
